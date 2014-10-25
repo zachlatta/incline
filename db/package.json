@@ -1,0 +1,24 @@
+{
+  "name": "db",
+  "version": "0.0.1",
+  "description": "Shared code for Incline's database.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/zachlatta/incline"
+  },
+  "author": "Zach Latta <zach@zachlatta.com> (http://zachlatta.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zachlatta/incline/issues"
+  },
+  "homepage": "https://github.com/zachlatta/incline",
+  "dependencies": {
+    "pg": "^3.6.2",
+    "sequelize": "^2.0.0-rc2",
+    "sequelize-cli": "^0.3.3"
+  }
+}
