@@ -1,8 +1,7 @@
 {
   "name": "incline-scraper",
   "version": "0.0.1",
-  "description": "",
-  "main": "app.js",
+  "description": "Command-line utility for scraping bank websites.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +14,12 @@
   "bugs": {
     "url": "https://github.com/zachlatta/incline/issues"
   },
-  "homepage": "https://github.com/zachlatta/incline"
+  "homepage": "https://github.com/zachlatta/incline",
+  "dependencies": {
+    "commander": "^2.5.0",
+    "nightmare": "^1.5.0"
+  },
+  "bin": {
+    "scraper": "scraper.js"
+  }
 }
