@@ -16,7 +16,13 @@ module.exports = {
       password: Sequelize.TEXT
     });
 
+    var WebHook = sequelize.define('web_hook', {
+      event: Sequelize.TEXT,
+      url: Sequelize.TEXT
+    });
+
     module.exports.Login = Login;
+    module.exports.WebHook = WebHook;
 
     sequelize
       .authenticate()

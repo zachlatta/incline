@@ -1,8 +1,13 @@
 #!/usr/bin/env node
 
-var Nightmare = require('nightmare');
 var program = require('commander');
 var db = require('../db');
+
+var chase = require('./chase.js');
+
+var banks = {
+  'chase': chase
+};
 
 var dbURL = process.env.DATABASE_URL;
 
@@ -23,7 +28,18 @@ program
       process.exit(1);
     }
 
-    console.log('Updating transactions for ' + program.bank);
+    var bank = banks[program.bank];
+
+    if (!bank) {
+      console.error('Invalid bank! Valid banks are: ' +
+                    Object.keys(banks).join(','));
+      process.exit(1);
+    }
+
+    bank.transactions()
+      .then(function () {
+        console.log('Done!');
+      });
   });
 
 db.connect(dbURL, function (err) {
