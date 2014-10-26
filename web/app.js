@@ -13,6 +13,19 @@ if (!dbURL) {
 
 app.use(bodyParser.json());
 
+app.get('/logins', function (req, res) {
+  db.Login.findAll().success(function (logins) {
+    res.send(logins);
+  });
+});
+
+app.post('/logins', function (req, res) {
+  var login = db.Login.build(req.body);
+  login.save().success(function (login) {
+    res.send(login);
+  });
+});
+
 db.connect(dbURL, function (err) {
   if (err) {
     console.error(err);

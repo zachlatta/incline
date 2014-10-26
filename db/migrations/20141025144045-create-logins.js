@@ -3,7 +3,7 @@
 module.exports = {
   up: function(migration, DataTypes, done) {
     migration.createTable(
-      'accounts',
+      'logins',
       {
         id: {
           type: DataTypes.INTEGER,
@@ -28,7 +28,7 @@ module.exports = {
   },
 
   down: function(migration, DataTypes, done) {
-    migration.dropTable('accounts');
+    migration.dropTable('logins');
     done();
   }
 };

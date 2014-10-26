@@ -7,7 +7,7 @@ module.exports = {
       logging: false
     });
 
-    var Account = sequelize.define('account', {
+    var Login = sequelize.define('login', {
       bank: Sequelize.TEXT,
       username: {
         type: Sequelize.TEXT,
@@ -16,7 +16,7 @@ module.exports = {
       password: Sequelize.TEXT
     });
 
-    module.exports.Account = Account;
+    module.exports.Login = Login;
 
     sequelize
       .authenticate()
@@ -24,5 +24,5 @@ module.exports = {
   },
 
   Sequelize: Sequelize,
-  sequelize: sequelize,
+  sequelize: sequelize
 }
