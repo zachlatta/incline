@@ -1,0 +1,19 @@
+{
+  "name": "incline-web",
+  "version": "0.0.1",
+  "description": "Web frontend of Incline.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/zachlatta/incline"
+  },
+  "author": "Zach Latta <zach@zachlatta.com> (http://zachlatta.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zachlatta/incline/issues"
+  },
+  "homepage": "https://github.com/zachlatta/incline"
+}
